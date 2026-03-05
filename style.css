@@ -245,7 +245,7 @@ p{margin: 0%;}
 }
 
 .button_menu {
-  width: 30%;
+  width: 25%;
   height: 80%;
   background-color: #00C878;
   color: #252525f1;
@@ -304,4 +304,16 @@ p{margin: 0%;}
   align-items: center;
   justify-content: center;
 
+}
+.trensparent{
+  background-color: #00000000;
+  border: transparent 0;
+  width: 100%;
+  height: 100%;
+  
+  transition: transform 0.3s ease,color 0.3s ease;
+}
+.trensparent:hover {
+  transform: scale(1.15);
+  color: #00C878;
 }
