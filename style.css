@@ -41,6 +41,7 @@ header, section, footer {
   max-width: 1000px;
   display: flex;
   flex-flow: column;
+  
   align-items: center;
   background: #000000d3;
   border: 4px solid #00C878;
@@ -51,22 +52,17 @@ header, section, footer {
   display: flex;
   flex-flow: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
   background: #2a3c5a;
   padding: 2%;
   margin-bottom: 2%;
   border-radius: 20px;
-  height: 1000;
+  height: 1300;
 }
-.blockProjet{
-  display: flex;
-  flex-flow: row;
-  align-items: center;
-  justify-content: space-around;
-}
+
 .img_pres{
   max-width: 40%;
-  padding: 5%;
+  padding: 1%;
 }
 .cadre_bouton{
   display: flex;
@@ -103,8 +99,57 @@ button {
     padding: 10px;
     cursor: pointer;
 }
-.prev { left: 0; }
-.next { right: 0; }
+.prev { 
+  background-color: #00C878;
+  color: #252525f1;
+  border: solid, 5px;
+  border-color: #00c87800;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: 900;
+
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.prev:hover{
+  transform: scale(1.15);
+  box-shadow: 0 0 10px #00c878c0;
+  background-color: #252525f1;
+  color: #00C878;
+  border-color: #00C878;
+}
+.next { 
+  background-color: #00C878;
+  color: #252525f1;
+  border: solid, 5px;
+  border-color: #00c87800;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: 900;
+
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.next:hover{
+  transform: scale(1.15);
+  box-shadow: 0 0 10px #00c878c0;
+  background-color: #252525f1;
+  color: #00C878;
+  border-color: #00C878;
+}
+p{margin: 0%;}
+
+
+
+
+
+
 .dots {
     text-align: center;
     margin-top: 10px;
@@ -122,24 +167,8 @@ button {
 .dot.active {
     background-color: #51ff00; 
 }
-.cadre_bouton button {
-    border: none;          
-    width: 40px;            
-    height: 40px;           
-    border-radius: 40%;     
-    background-color: #a4a5a8; 
-    color: #201b1b;           
-    font-size: 24px;        
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s, transform 0.2s;
-}
-.cadre_bouton button:hover {
-    background-color: #374151; 
-    transform: scale(1.1);  
-}
+
+
 .second_block{
   margin: 5% 0;
   width: 100%;
@@ -173,6 +202,14 @@ button {
   align-items: center;
   justify-content: space-around;
 }
+.alignement_ligne_coller{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content:flex-start;
+}
 .alignement_col{
   width: 100%;
   height: auto;
@@ -180,6 +217,22 @@ button {
   flex-flow: column;
   align-items: center;
   justify-content: space-around;
+}
+.alignement_col_logo{
+  width: 35%;
+  height: auto;
+  display: flex;
+  flex-flow: column;
+  align-items: end;
+  justify-content: space-around;
+}
+.alignement_col_text{
+  width: 30%;
+  height: auto;
+  display: flex;
+  flex-flow: column;
+  align-items: start;
+  justify-content: start;
 }
 #refletsCanvas {
   position: fixed;
@@ -216,9 +269,39 @@ button {
   color: #00C878;
   border-color: #00C878;
 }
+.contact_ligne{
+  width: 60%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 10px 0;
+}
 
-.description{
-  display:  flex;
+.cadre_logo{
+  width: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.logo{
+  width: 100%;
+}
+
+.contact_ligne p{
+  margin: 0;
+}
+.text{
+  width: 100%;
+  display: flex;
   flex-flow: column;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+  margin: 0;;
+}
+.blockProjet{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+
 }
