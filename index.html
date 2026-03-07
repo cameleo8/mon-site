@@ -2,6 +2,7 @@
     <meta charset="UTF-8">
     <title>Léo Chevalier | Game Programmer</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <canvas id="refletsCanvas"></canvas>
@@ -32,6 +33,18 @@
                     <h1>Projets phares</h1>
                     </div>
 
+                    <div class="cadre_bouton">
+                        <button class="prev">❮</button>
+
+                        <div class="dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+
+                        <button class="next">❯</button>
+                    </div>
+
                     
                     <div class="slides">
 
@@ -51,8 +64,6 @@
 
                                             <p>
                                                 Projet de jeu de cartes stratégique en tour par tour basé sur un système de placement par zones.
-                                            </p>
-                                            <p>
                                                 Chaque carte possède un type qui détermine les emplacements où elle peut être jouée.
                                             </p>
                                             <br>
@@ -85,8 +96,6 @@
                                             </p>
                                             <p>
                                                 Elle sélectionne ses cartes en fonction de leur type, vérifie les emplacements autorisés 
-                                            </p>
-                                            <p>
                                                 et adopte une logique de contre-stratégie pour répondre aux actions du joueur.
                                             </p>
 
@@ -101,8 +110,6 @@
                                             <br>
                                             <p>
                                                 Ce projet met en avant mon travail sur l’ergonomie, 
-                                            </p>
-                                            <p>
                                                 la lisibilité des mécaniques et la fluidité des interactions joueur.
                                             </p>
                                 </div>
@@ -111,67 +118,56 @@
 
                         <div class="slide">
                             <div class="project" >
-                                <h2>Revolution dawn</h2>
+                                <h2>Wich bond</h2>
                                 <div class="blockProjet">
-                                        <h3 class="text">Jeu de cartes tactique au tour par tour</h3>
+                                        <h3 class="text">Jeu d'infiltration a la troisiemme prssonne</h3>
                                             <br>
 
-                                            <p>
-                                                Projet de jeu de cartes stratégique en tour par tour basé sur un système de placement par zones.
-                                            </p>
-                                            <p>
-                                                Chaque carte possède un type qui détermine les emplacements où elle peut être jouée.
-                                            </p>
+                                            <p> Un prototype de jeu d'infiltration inspiré des jeux d'espionnage à la James Bond, où le joueur doit progresser dans un niveau sans être repéré. Le but est d’éviter des gardes en patrouille, des caméras de sécurité et d'autres systèmes de surveillance. </p>
                                             <br>
 
 
                                             <img src="ressource/img.png" alt="image de representation du projet" class="img_pres">
 
 
-                                            <h3>Système de cartes</h3>
-                                            <ul>
-                                                <li class="text"><strong>Cartes à distance :<br></strong> jouables en zone arrière et milieu</li>
+                                            <h3>Mécaniques et éléments</h3> 
+                                            <ul> <li class="text"><strong>Top Down :
                                                 <br>
-                                                <li class="text"><strong>Cartes de corps-à-corps :<br></strong> jouables en zone avant et milieu</li>
-                                                <br>
-                                                <li class="text"><strong>Cartes spéciales :<br></strong> jouables sur toutes les zones</li>
+                                                </strong> caméra en vue du dessus</li> 
+                                                <br> 
+                                                <li class="text">
+                                                    <strong>Système de bruit :<br></strong> 
+                                                    plus le joueur se déplace vite, plus il fait de bruit
+                                                </li> 
+                                                <br> 
+                                                <li class="text">
+                                                    <strong>Luminosité :<br></strong> 
+                                                    la vitesse de détection varie selon la luminosité
+                                                </li> 
                                             </ul>
 
-                                            <p >
-                                                Le gameplay repose sur la gestion du positionnement et l’anticipation des actions adverses.
-                                            </p>
+                                            <p> Le gameplay repose sur la gestion du positionnement et l’anticipation des actions des gardes et des caméras. </p>
+
                                             <br>
 
 
                                             <img src="ressource/img.png" alt="image de representation du projet" class="img_pres">
 
 
-                                            <h3>Intelligence Artificielle</h3>
-                                            <p>
-                                                Une IA a été développée pour respecter les mêmes règles que le joueur. 
-                                            </p>
-                                            <p>
-                                                Elle sélectionne ses cartes en fonction de leur type, vérifie les emplacements autorisés 
-                                            </p>
-                                            <p>
-                                                et adopte une logique de contre-stratégie pour répondre aux actions du joueur.
-                                            </p>
-
-                                            <h3>Focus du projet : Game Feel & Feedback</h3>
-                                            <ul>
-                                                <li>Système complet de drag & drop</li>
-                                                <li>Animations dynamiques des cartes</li>
-                                                <li>Effet d’inclinaison lors du déplacement</li>
-                                                <li>Feedback visuel sur chaque bouton</li>
-                                                <li>Indications claires des zones valides et invalides</li>
-                                            </ul>
-                                            <br>
-                                            <p>
-                                                Ce projet met en avant mon travail sur l’ergonomie, 
-                                            </p>
-                                            <p>
-                                                la lisibilité des mécaniques et la fluidité des interactions joueur.
-                                            </p>
+                                            <h3>Intelligence artificielle</h3> 
+                                            <p> Une IA a été développée pour repérer le joueur et réagir à différents événements. </p> 
+                                            <p> Si un garde aperçoit brièvement le joueur, il s'immobilise et le suit du regard. Si le joueur reste trop longtemps visible, le garde se déplace vers l’endroit où il l’a vu pour la dernière fois. </p> 
+                                            <p> Le même principe s’applique aux bruits de pas. Si l’ennemi détecte clairement le joueur, il le poursuit jusqu’à le perdre de vue. À ce moment-là, il inspecte la zone pendant un certain temps avant de reprendre sa patrouille. </p> 
+                                            <h3>Focus du projet : Character Controller et caméra</h3> 
+                                            <ul> 
+                                                <li>Système complet de déplacement</li> 
+                                                <li>Animations d'action du joueur</li> 
+                                                <li>Système de bruit lié au déplacement</li> 
+                                                <li>Système de calcul de la luminosité sur le joueur</li> 
+                                                <li>IA ennemie simple pour détecter le joueur</li> 
+                                            </ul> 
+                                            <br> 
+                                            <p> Ce projet met en avant mon travail sur le développement de mécaniques de gameplay, notamment le capteur de lumière et une IA simple de détection du joueur. </p>
                                 </div>
                             </div>
                         </div>
@@ -304,7 +300,7 @@
         </main>
         <footer>
             <div class="block">
-                <h3>Me Contacter</h3>
+                <h3>Mes réseaux & contactes</h3>
 
                 <div class="contact_ligne">
                     <a href="mailto:chevalierleo685@gmail.com" class="cadre_logo">
@@ -314,17 +310,17 @@
                 </div>
 
                 <div class="contact_ligne">
-                    <a href="#" class="cadre_logo">
+                    <a href="https://www.linkedin.com/in/leo-chevalier-8a5047268/" class="cadre_logo">
                         <img src="ressource/logo linkedin.png" class="logo">
                     </a>
                     <p>Leo Chevalier</p>
                 </div>
 
                 <div class="contact_ligne">
-                    <a href="mailto:chevalierleo685@gmail.com" class="cadre_logo">
-                        <img src="ressource/logo mail.png" class="logo">
+                    <a href="https://github.com/cameleo8" class="cadre_logo">
+                        <img src="ressource/logo github.png" class="logo">
                     </a>
-                    <p>chevalierleo685@gmail.com</p>
+                    <p>cameleo8</p>
                 </div>
             </div>
         </footer>

@@ -57,7 +57,7 @@ header, section, footer {
   padding: 2%;
   margin-bottom: 2%;
   border-radius: 20px;
-  height: 1300;
+  height: auto;
 }
 
 .img_pres{
@@ -143,10 +143,10 @@ button {
   color: #00C878;
   border-color: #00C878;
 }
-p{margin: 0%;}
-
-
-
+p{
+  margin: 0 0 2% 0;
+  text-align: center;
+}
 
 
 
@@ -316,4 +316,63 @@ p{margin: 0%;}
 .trensparent:hover {
   transform: scale(1.15);
   color: #00C878;
+}
+
+/* --- Ajustements pour les écrans mobiles --- */
+@media (max-width: 768px) {
+
+  /* Texte plus gros et plus lisible sur téléphone */
+  body {
+    font-size: 10px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  p, li {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  /* Images plus larges sur mobile */
+  .img_pres {
+    max-width: 80%;
+  }
+
+  /* Marges un peu réduites pour que tout rentre bien */
+  .back, .second_block, .block {
+    width: 90%;
+    padding: 4%;
+  }
+
+  /* Boutons plus grands et plus confortables au toucher */
+  .button_menu {
+    font-size: 12px;
+    padding: 10px 0;
+    width: 45%;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+  }
+  .prev, .next{
+    
+    font-size: 12px;
+    padding: 10px 0;
+    width: 35%;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+    margin: 5%
+  }
+
+  /* Éléments alignés en colonne pour éviter le débordement horizontal */
+  .alignement_ligne, .alignement_ligne_coller {
+    flex-flow: column;
+    align-items: center;
+  }
 }
