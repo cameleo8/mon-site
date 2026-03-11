@@ -6,17 +6,23 @@
 
 const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot");
+const dotss = document.querySelectorAll(".dotb");
 const nextBtn = document.querySelector(".next");
 const prevBtn = document.querySelector(".prev");
+
+const nextBtns = document.querySelector(".nexts");
+const prevBtns = document.querySelector(".prevs");
 
 let current = 0;
 
 function showSlide(index) {
     slides.forEach(slide => slide.classList.remove("active"));
     dots.forEach(dot => dot.classList.remove("active"));
+    dotss.forEach(dot => dot.classList.remove("active"));
 
     slides[index].classList.add("active");
     dots[index].classList.add("active");
+    dotss[index].classList.add("active");
 }
 
 nextBtn.addEventListener("click", () => {
@@ -31,7 +37,26 @@ prevBtn.addEventListener("click", () => {
     showSlide(current);
 });
 
+nextBtns.addEventListener("click", () => {
+    current++;
+    if (current >= slides.length) current = 0;
+    showSlide(current);
+});
+
+prevBtns.addEventListener("click", () => {
+    current--;
+    if (current < 0) current = slides.length - 1;
+    showSlide(current);
+});
+
 dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+        current = i;
+        showSlide(current);
+    });
+});
+
+dotss.forEach((dot, i) => {
     dot.addEventListener("click", () => {
         current = i;
         showSlide(current);

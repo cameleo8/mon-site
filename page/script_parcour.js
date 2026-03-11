@@ -75,7 +75,7 @@ function drawBackground() {
 
 
 // ===== GRILLE HEXAGONALE =====
-const baseColor = { r: 180, g: 0, b: 255 }; // change la couleur ici
+const baseColor = { r: 0, g: 215, b: 230 }; // change la couleur ici
 
 function drawHexGrid() {
     for (let row = 0; row < Math.ceil(height / hexHeight) + 2; row++) {
